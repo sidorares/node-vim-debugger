@@ -1,6 +1,6 @@
-var Agent = require('./agent.js');
+var Agent = require('../lib/agent.js');
 
-  var dc = require('v8-debugger').createClient({ port: 3334});
+  var dc = require('v8-debugger').createClient({ port: 3333});
   var a = new Agent(3219);
   a.addDebuggerClient(dc);
 
