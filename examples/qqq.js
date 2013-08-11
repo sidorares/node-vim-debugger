@@ -9,7 +9,10 @@ require('/usr/local/lib/node_modules/coffee-script');
 var bbb = require('./testc.coffee');
 console.log(bbb(123));
 console.log('aaa');
-//debugger;
+var f = new Function("var a = 1;\n\n\n; var b = 2;\n\n\n debugger; return a+b;");
+debugger;
+
+var c = f();
 
 
 
