@@ -31,5 +31,20 @@ vim -nb
 ```
 or if you have vim already running, type `:nbs` in command mode
 
+keys
+====
+  - <kbd>CTRL</kbd>+<kbd>c</kbd> - continue
+  - <kbd>CTRL</kbd>+<kbd>i</kbd> - step in
+  - <kbd>CTRL</kbd>+<kbd>o</kbd> - step over
+  - <kbd>CTRL</kbd>+<kbd>n</kbd> - step next
+  - <kbd>CTRL</kbd>+<kbd>u</kbd> - move one stack frame up
+  - <kbd>CTRL</kbd>+<kbd>d</kbd> - move one stack frame down
+  - <kbd>CTRL</kbd>+<kbd>b</kbd> - set breakpoint at current location
+
 TODO:
-do steps 1-3 from one vim command (`:ndebug` ?)
+
+  -do steps 1-3 from one vim command (`:ndebug` ?)
+  - live edit
+  - switch compiled js/original source
+  - jump to symbol
+  - eval balloons (only for GUI vim)
