@@ -48,3 +48,7 @@ TODO:
   - switch compiled js/original source
   - jump to symbol
   - eval balloons (only for GUI vim)
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/sidorares/node-vim-debugger/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
