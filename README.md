@@ -7,7 +7,7 @@ install
 ============
 
 ```sh
-npm instqll -g vimdebug
+npm install -g vimdebug
 ```
 
 use
