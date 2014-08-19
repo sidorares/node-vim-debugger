@@ -1,9 +1,12 @@
+#!/usr/bin/env node
+
 var portfinder = require('portfinder')
 var spawn = require('child_process').spawn;
 var argv  = require('optimist').argv;
 
 var NBAgent    = require('../lib/agent.js');
-var Debugger   = require('_debugger');
+//var Debugger   = require('_debugger');
+var Debugger   = require('v8-debugger');
 var Repl  = require('../lib/repl.js');
 
 var dc = new Debugger.Client();
@@ -49,15 +52,26 @@ function afterConnect() {
   agent.addDebuggerClient(dc);
 
   // TODO: spawn vim automatically as well?
-  //spawn('tmux', ['split-window', 'vim -nb']);
+  // // tmux
+  //spawn('tmux', ['split-window', '-p', '25', 'vim -nb']);
+  spawn('tmux', ['split-window', '-p', '75', 'vim -nb']);
+  spawn('tmux', ['swap-pane', '-D']);
+
+  // // i3 window manager:
+  // // via i3 cli
   //var c = spawn('sh', ["i3 exec \"konsole -e 'vim -nb'\""]);
+  // // or node client
   //var i3 = require('i3').createClient();
+  //i3.command('split v');
+  //i3.command('resize grow height 10 ppt')
   //i3.command('exec "konsole -e \'vim -nb\'"')
 
   // TODO: when netbeans port comes from portfinder, display it in the message
   // so it's easier to connect vim manually
   // don't display if its default 3219
-  console.log('start vim with "vim -nb" command or type :nbs within vim');
+  //console.log('start vim with "vim -nb" command or type :nbs within vim');
+
+  // TODO: handle vim disconnects
 
   Repl(dc, agent);
 }
