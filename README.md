@@ -3,6 +3,8 @@ node-vim-debugger
 
 Node.js debugger client and vim driver. Step-by-step debugging from vim.
 
+![vimdebug](https://cloud.githubusercontent.com/assets/173025/3963425/7c2322b0-277b-11e4-8bd0-506fe8f9ba8a.gif)
+
 install
 ============
 
