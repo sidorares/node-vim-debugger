@@ -30,6 +30,7 @@
     "portfinder": "^0.2.1",
     "source-map": "~0.1.25",
     "tmp": "0.0.20",
+    "v8-debugger": "0.0.3",
     "vim-netbeans": "~2.0.0"
   }
 }
