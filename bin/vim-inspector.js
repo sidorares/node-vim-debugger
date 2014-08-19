@@ -53,8 +53,7 @@ function afterConnect() {
 
   // TODO: spawn vim automatically as well?
   // // tmux
-  //spawn('tmux', ['split-window', '-p', '25', 'vim -nb']);
-  spawn('tmux', ['split-window', '-p', '75', 'vim -nb']);
+  spawn('tmux', ['split-window', '-p', '25', 'vim -nb']);
   spawn('tmux', ['swap-pane', '-D']);
 
   // // i3 window manager:
