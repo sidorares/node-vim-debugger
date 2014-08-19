@@ -2,6 +2,7 @@ f = (t) ->
   g = t + 1
   b = g if true
   d = c?.d
+  debugger
   g + 5
 
 
@@ -24,6 +25,7 @@ f = (t) ->
 
 
 module.exports = (x) ->
+  cp = require.resolve('coffee-script')
   x += 1
   console.log('line3')
   debugger

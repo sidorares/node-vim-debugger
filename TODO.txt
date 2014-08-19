@@ -1,0 +1,6 @@
+- add support for source maps in comments
+  - jade sm example using https://github.com/sidorares/browserify-jade
+  - test with https://github.com/sokra/source-map-visualization
+
+- repl DSL https://github.com/sidorares/node-vim-debugger/issues/11
+- user configured actions on startup/step/break

@@ -23,9 +23,13 @@
   "author": "Andrey Sidorov <sidorares@yandex.ru>",
   "license": "MIT",
   "dependencies": {
-    "vim-netbeans": "~2.0.0",
-    "tmp": "0.0.20",
+    "cardinal": "^0.4.4",
+    "coffee-script": "~1.6.3",
+    "convert-source-map": "^0.4.1",
+    "optimist": "^0.6.1",
+    "portfinder": "^0.2.1",
     "source-map": "~0.1.25",
-    "coffee-script": "~1.6.3"
+    "tmp": "0.0.20",
+    "vim-netbeans": "~2.0.0"
   }
 }
