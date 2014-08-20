@@ -1,4 +1,4 @@
-[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=sidorares&url=https://github.com/sidorares/node-vim-debugger&title=node-vim-debugger&language=&tags=github&category=software) 
+[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=sidorares&url=https://github.com/sidorares/node-vim-debugger&title=node-vim-debugger&language=&tags=github&category=software)
 
 node-vim-debugger
 =================
@@ -44,7 +44,7 @@ or if you have vim already running, type `:nbs` in command mode
   - <kbd>CTRL</kbd>+<kbd>n</kbd> - step next
   - <kbd>CTRL</kbd>+<kbd>u</kbd> - move one stack frame up
   - <kbd>CTRL</kbd>+<kbd>d</kbd> - move one stack frame down
-  - <kbd>CTRL</kbd>+<kbd>b</kbd> - set breakpoint at current location
+  - <kbd>CTRL</kbd>+<kbd>p</kbd> - set breakpoint at current location
 
 
 ### Links
