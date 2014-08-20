@@ -5,9 +5,11 @@ var spawn = require('child_process').spawn;
 var argv  = require('optimist').argv;
 
 var NBAgent    = require('../lib/agent.js');
-//var Debugger   = require('_debugger');
+// I have some tweaks in v8-debugger, most important, 'requireSource' flag in lookup requests
+// otherwise "v8-debugger" can be replaced with built-in "_debugger"
+//var Debugger  = require('_debugger');
 var Debugger   = require('v8-debugger');
-var Repl  = require('../lib/repl.js');
+var Repl       = require('../lib/repl.js');
 
 var dc = new Debugger.Client();
 // TODO: handle multiple ports, assign first available starting from 3219
@@ -26,6 +28,8 @@ if (argv._.length != 0) {
       return;
     }
     banner += data.toString();
+    // TODO: this assumes no more stderr messages after banner
+    // more correct way: if more text after banner in one single chunk, treat it as script stderr
     var m = banner.match(/debugger listening on port ([0-9]*)/i);
     if (m) {
       waitBanner = false;
@@ -51,10 +55,16 @@ function afterConnect() {
 
   agent.addDebuggerClient(dc);
 
-  // TODO: spawn vim automatically as well?
+  // ========================
+  // uncomment one of these if you want vim to be launched automatically
+  // eventually will be moved to user script with on start / break / line / repl actions
+  // =======================
+
   // // tmux
-  spawn('tmux', ['split-window', '-p', '25', 'vim -nb']);
-  spawn('tmux', ['swap-pane', '-D']);
+  if (process.env.TMUX) {
+    spawn('tmux', ['split-window', '-p', '25', 'vim -nb']);
+    spawn('tmux', ['swap-pane', '-D']);
+  }
 
   // // i3 window manager:
   // // via i3 cli
@@ -68,7 +78,7 @@ function afterConnect() {
   // TODO: when netbeans port comes from portfinder, display it in the message
   // so it's easier to connect vim manually
   // don't display if its default 3219
-  //console.log('start vim with "vim -nb" command or type :nbs within vim');
+  console.log('start vim with "vim -nb" command or type :nbs within vim');
 
   // TODO: handle vim disconnects
 
