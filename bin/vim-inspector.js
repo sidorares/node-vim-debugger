@@ -49,10 +49,11 @@ if (argv._.length != 0) {
     var m = banner.match(/debugger listening on port ([0-9]*)/i);
     if (m) {
       waitBanner = false;
+      // TODO: figure out a cleaner way, without setTimeout, which may fail on slower environments
       setTimeout(function() {
         dc.connect(5858);
         dc.on('ready', afterConnect);
-      }, 100);
+      }, 300);
     }
     // TODO: check if there is more data after banner; if so treat it as script stderr data
     // TODO: decorate stdout here as well
