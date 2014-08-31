@@ -13,6 +13,9 @@ var conf = require('rc')("vimdebug", {
   },
   agent: {
     port: 3219
+  },
+  debugger: {
+    port: 5858
   }
 });
 
@@ -35,7 +38,7 @@ if (argv._.length != 0) {
   // we need to spawn process
   // TODO: use port from portfinder instead 5858 to allow
   // multiple debuggers on the same machine
-  var child = spawn(process.execPath, ['--debug-brk=5858'].concat(argv._));
+  var child = spawn(process.execPath, ['--debug-brk=' + conf.debugger.port].concat(argv._));
   var banner = '';
   var waitBanner = true;
   child.stderr.on('data', function(data) {
@@ -51,7 +54,8 @@ if (argv._.length != 0) {
       waitBanner = false;
       // TODO: figure out a cleaner way, without setTimeout, which may fail on slower environments
       setTimeout(function() {
-        dc.connect(5858);
+        console.log('Debugger listening on port ' + conf.debugger.port);
+        dc.connect(conf.debugger.port);
         dc.on('ready', afterConnect);
       }, 300);
     }
