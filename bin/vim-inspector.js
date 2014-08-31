@@ -63,7 +63,12 @@ if (argv._.length != 0) {
     // TODO: decorate stdout here as well
   });
   child.stdout.on('data', function(data) {
-    console.log('out > ' + data);
+    console.log('');
+    data.toString().split('\n').forEach(function (line) {
+      if (line) {
+        console.log('out > %s', line);
+      }
+    });
   });
 } else {
   // TODO: read port from command line (we are connecting to already
