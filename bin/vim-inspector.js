@@ -1,4 +1,20 @@
 #!/usr/bin/env node
+var conf = require('rc')("vimdebug", {
+  vim: {
+    keys: {
+      break    : "C-p",
+      continue : "C-c",
+      down     : "C-d",
+      in       : "C-i",
+      next     : "C-n",
+      out      : "C-o",
+      up       : "C-u"
+    },
+  },
+  agent: {
+    port: 3219
+  }
+});
 
 var portfinder = require('portfinder')
 var spawn = require('child_process').spawn;
@@ -13,7 +29,7 @@ var Repl       = require('../lib/repl.js');
 
 var dc = new Debugger.Client();
 // TODO: handle multiple ports, assign first available starting from 3219
-var agent  = new NBAgent(3219);
+var agent  = new NBAgent(conf);
 
 if (argv._.length != 0) {
   // we need to spawn process
