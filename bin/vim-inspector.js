@@ -1,4 +1,23 @@
 #!/usr/bin/env node
+var conf = require('rc')("vimdebug", {
+  vim: {
+    keys: {
+      break    : "C-p",
+      continue : "C-c",
+      down     : "C-d",
+      in       : "C-i",
+      next     : "C-n",
+      out      : "C-o",
+      up       : "C-u"
+    },
+  },
+  agent: {
+    port: 3219
+  },
+  debugger: {
+    port: 5858
+  }
+});
 
 var portfinder = require('portfinder')
 var spawn = require('child_process').spawn;
@@ -13,13 +32,13 @@ var Repl       = require('../lib/repl.js');
 
 var dc = new Debugger.Client();
 // TODO: handle multiple ports, assign first available starting from 3219
-var agent  = new NBAgent(3219);
+var agent  = new NBAgent(conf);
 
 if (argv._.length != 0) {
   // we need to spawn process
   // TODO: use port from portfinder instead 5858 to allow
   // multiple debuggers on the same machine
-  var child = spawn(process.execPath, ['--debug-brk=5858'].concat(argv._));
+  var child = spawn(process.execPath, ['--debug-brk=' + conf.debugger.port].concat(argv._));
   var banner = '';
   var waitBanner = true;
   child.stderr.on('data', function(data) {
@@ -33,16 +52,23 @@ if (argv._.length != 0) {
     var m = banner.match(/debugger listening on port ([0-9]*)/i);
     if (m) {
       waitBanner = false;
+      // TODO: figure out a cleaner way, without setTimeout, which may fail on slower environments
       setTimeout(function() {
-        dc.connect(5858);
+        console.log('Debugger listening on port ' + conf.debugger.port);
+        dc.connect(conf.debugger.port);
         dc.on('ready', afterConnect);
-      }, 100);
+      }, 300);
     }
     // TODO: check if there is more data after banner; if so treat it as script stderr data
     // TODO: decorate stdout here as well
   });
   child.stdout.on('data', function(data) {
-    console.log('out > ' + data);
+    console.log('');
+    data.toString().split('\n').forEach(function (line) {
+      if (line) {
+        console.log('out > %s', line);
+      }
+    });
   });
 } else {
   // TODO: read port from command line (we are connecting to already
