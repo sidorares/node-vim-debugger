@@ -109,4 +109,7 @@ function afterConnect() {
   // TODO: handle vim disconnects
 
   Repl(dc, agent);
+  dc.repl.on('exit', function () {
+    process.exit();
+  });
 }
