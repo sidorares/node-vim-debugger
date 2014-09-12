@@ -16,7 +16,8 @@ var conf = require('rc')("vimdebug", {
   },
   debugger: {
     port: 5858
-  }
+  },
+  windowmanager: ''
 });
 
 var portfinder = require('portfinder')
@@ -81,33 +82,31 @@ function afterConnect() {
 
   agent.addDebuggerClient(dc);
 
-  // ========================
-  // uncomment one of these if you want vim to be launched automatically
+  // ===================================================================================
   // eventually will be moved to user script with on start / break / line / repl actions
-  // =======================
-
-  // // tmux
-  if (process.env.TMUX) {
-    spawn('tmux', ['split-window', '-p', '25', 'vim -nb']);
-    spawn('tmux', ['swap-pane', '-D']);
+  // ===================================================================================
+  switch (conf.windowmanager) {
+    case 'tmux':
+      if (process.env.TMUX) {
+        spawn('tmux', ['split-window', '-p', '25', 'vim -nb']);
+        spawn('tmux', ['swap-pane', '-D']);
+      }
+      break;
+    case 'i3':
+      var i3 = require('i3').createClient();
+      i3.command('split v');
+      i3.command('resize grow height 10 ppt')
+      i3.command('exec "konsole -e \'vim -nb\'"')
+      break;
+    default:
+      // TODO: when netbeans port comes from portfinder, display it in the message
+      // so it's easier to connect vim manually
+      // don't display if its default 3219
+      console.log('start vim with "vim -nb" command or type :nbs within vim');
+      break;
   }
 
-  // // i3 window manager:
-  // // via i3 cli
-  //var c = spawn('sh', ["i3 exec \"konsole -e 'vim -nb'\""]);
-  // // or node client
-  //var i3 = require('i3').createClient();
-  //i3.command('split v');
-  //i3.command('resize grow height 10 ppt')
-  //i3.command('exec "konsole -e \'vim -nb\'"')
-
-  // TODO: when netbeans port comes from portfinder, display it in the message
-  // so it's easier to connect vim manually
-  // don't display if its default 3219
-  console.log('start vim with "vim -nb" command or type :nbs within vim');
-
   // TODO: handle vim disconnects
-
   Repl(dc, agent);
   dc.repl.on('exit', function () {
     process.exit();
