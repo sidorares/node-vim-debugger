@@ -93,8 +93,6 @@ function afterConnect() {
       }
       break;
     case 'i3':
-      var c = spawn('sh', ["i3 exec \"konsole -e 'vim -nb'\""]);
-       // or node client
       var i3 = require('i3').createClient();
       i3.command('split v');
       i3.command('resize grow height 10 ppt')
