@@ -2,6 +2,7 @@
 
 node-vim-debugger
 =================
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/sidorares/node-vim-debugger?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Node.js debugger client and vim driver. Step-by-step debugging from vim.
 
