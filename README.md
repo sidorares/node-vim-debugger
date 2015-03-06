@@ -77,7 +77,7 @@ The default configuration is as follows:
       "next"     : "C-n",
       "out"      : "C-o",
       "up"       : "C-u"
-    },
+    }
   },
   "agent": {
     "port": 3219
