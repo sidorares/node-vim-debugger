@@ -1,6 +1,6 @@
 {
   "name": "vimdebug",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "vim-netbeans based debugger",
   "main": "index.js",
   "scripts": {
