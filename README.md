@@ -154,6 +154,7 @@ Move up one stack frame.
   - [node-cli-debugger](https://github.com/sidorares/node-cli-debugger)
   - [debugger protocol node client](https://github.com/sidorares/v8-debugger-protocol)
   - [node-vim](https://github.com/moll/vim-node) - node-related vim scripts
+  - ['readline-vim'](https://github.com/thlorenz/readline-vim) - vim keybindings for node readline
   - [ndb](https://github.com/smtlaissezfaire/ndb)
   - [node-profiler](https://github.com/bnoordhuis/node-profiler)
   - [v8.log processor](https://github.com/sidorares/node-tick)
