@@ -85,7 +85,7 @@ The default configuration is as follows:
   "debugger": {
     "port": 5858
   },
-  "windowmanager": ''
+  "windowmanager": ""
 }
 ```
 
