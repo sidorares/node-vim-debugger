@@ -153,6 +153,7 @@ Move up one stack frame.
   - [webkit-agent](https://github.com/c4milo/node-webkit-agent)
   - [node-cli-debugger](https://github.com/sidorares/node-cli-debugger)
   - [debugger protocol node client](https://github.com/sidorares/v8-debugger-protocol)
+  - [node-vim](https://github.com/moll/vim-node) - node-related vim scripts
   - [ndb](https://github.com/smtlaissezfaire/ndb)
   - [node-profiler](https://github.com/bnoordhuis/node-profiler)
   - [v8.log processor](https://github.com/sidorares/node-tick)
