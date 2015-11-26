@@ -5,6 +5,10 @@ var o1 = { aa: 1, bb: 'test' };
 
 debugger;
 
+var baz = require('./baz.js');
+
+baz();
+
 var util = require('util');
 
 //require('/usr/local/lib/node_modules/coffee-script');

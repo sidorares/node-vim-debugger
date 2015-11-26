@@ -1,4 +1,4 @@
-(function (exports, require, module, __filename, __dirname) { var jade = require('jade/lib/runtime.js');
+var jade = require('jade/lib/runtime.js');
 module.exports=function(params) { if (params) {params.require = require;} return (
 function template(locals) {
 var jade_debug = [{ lineno: 1, filename: "/Users/locomote/tmp/node-vim-debugger/examples/browserify-jade/example/foo.jade" }];
@@ -121,4 +121,3 @@ if (i == 2) debugger
 }
 )(params); }
 //@ sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9sb2NvbW90ZS90bXAvbm9kZS12aW0tZGVidWdnZXIvZXhhbXBsZXMvYnJvd3NlcmlmeS1qYWRlL2V4YW1wbGUvZm9vLmphZGUiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7O0FBQUE7OztBQUNBOztBQUNBOzs7QUFDQTs7O0FBQ0E7OztBQUNBOzs7QUFDQTs7Ozs7Ozs7O0FBQUE7QUFDQTs7O0FBRUE7O0FBQUE7OztBQUNBOzs7Ozs7QUFDQTs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFMQTtBQUNBOzs7QUFFQTs7QUFBQTs7O0FBQ0E7Ozs7OztBQUNBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBTUE7OztBQUNBOzs7QUFDQTs7QUFDQTs7O0FBQ0EiLCJmaWxlIjoiL1VzZXJzL2xvY29tb3RlL3RtcC9ub2RlLXZpbS1kZWJ1Z2dlci9leGFtcGxlcy9icm93c2VyaWZ5LWphZGUvZXhhbXBsZS9mb28uamFkZS5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8vIHRlc3QgdGVzdCB0ZXN0XG4vLy0gY29uc29sZS5sb2coJ3Rlc3QxJylcbi0gZGVidWdnZXI7XG4vLyB0ZXN0IHRlc3QgdGVzdFxuXG51bFxuICBlYWNoIHZhbCBpbiBbMSwgMiwgMywgNCwgNV1cbiAgICB0clxuICAgICAgLy8tIGNvbnNvbGUubG9nKHZhbCwgdmFsKjIpXG4gICAgICAtIGRlYnVnZ2VyXG4gICAgICB0ZD0gaWQgKyB2YWxcbiAgICAgIHRkPSBuYW1lXG5cblxuXG5cblxuLSBjb25zb2xlLmxvZyg1NTUpXG4tIHZhciBpID0gMVxuLy8tIGlmIChpID09IDEpIGNvbnNvbGUubG9nKFwidGVzdFwiKVxuLSBpKytcbi0gaWYgKGkgPT0gMikgZGVidWdnZXJcbiJdfQ==
-});
