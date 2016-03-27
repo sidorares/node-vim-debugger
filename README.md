@@ -52,6 +52,8 @@ node --debug-brk yourprogram.js
 node-vim-inspector --windowmanager=tmux
 ```
 
+to run all inside vim using [ConqueShell](https://github.com/lrvick/Conque-Shell) (+coffeescript support) see [here](https://gist.github.com/coderofsalvation/0aabf454888b8e5da213)
+
 ### keys
 
   - <kbd>CTRL</kbd>+<kbd>c</kbd> - continue
