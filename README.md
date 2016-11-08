@@ -91,9 +91,9 @@ The default configuration is as follows:
 }
 ```
 
-Any of these settings can be overridden either from the commondline, e.g. `--vim.keys.break="C-b"`, a `.vimdebugrc` json file selectively overriding properties or environment variables in the form of `export vimdebug_vim__keys__break="C-a"`.
+Any of these settings can be overridden either from the command line, e.g. `--vim.keys.break="C-b"`, a `.vimdebugrc` json file selectively overriding properties or environment variables in the form of `export vimdebug_vim__keys__break="C-a"`.
 
-The `.vimdebugrc` can be placed either in the current working directory, any directory above the current or the current user's home directory. In case there are multiple they will override eachother in this order.
+The `.vimdebugrc` can be placed either in the current working directory, any directory above the current or the current user's home directory. In case there are multiple they will override each other in this order.
 
 ## agent
 
@@ -105,11 +105,11 @@ Port the agent uses to establish a connection.
 
 ## debugger
 
-Settings for the spawn debugger. Only relevant when the debugger spawn from the `node-vim-inspector` client, e.e. it is called with the path of a NodeJS program to debug.
+Settings for the spawn debugger. Only relevant when the debugger spawn from the `node-vim-inspector` client, e.g. it is called with the path of a NodeJS program to debug.
 
 ### debugger.port
 
-Port to spwan the debugger on.
+Port to spawn the debugger on.
 
 ## vim
 
