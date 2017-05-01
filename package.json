@@ -23,14 +23,14 @@
   "author": "Andrey Sidorov <sidorares@yandex.ru>",
   "license": "MIT",
   "dependencies": {
-    "cardinal": "^0.4.4",
-    "coffee-script": "~1.6.3",
-    "convert-source-map": "^0.4.1",
+    "cardinal": "^1.0.0",
+    "coffee-script": "~1.12.5",
+    "convert-source-map": "^1.5.0",
     "optimist": "^0.6.1",
-    "portfinder": "^0.2.1",
-    "rc": "^0.5.1",
-    "source-map": "~0.1.25",
-    "tmp": "0.0.20",
+    "portfinder": "^1.0.13",
+    "rc": "^1.2.1",
+    "source-map": "~0.5.6",
+    "tmp": "0.0.31",
     "v8-debugger": "1.0.0",
     "vim-netbeans": "~2.0.0"
   }
