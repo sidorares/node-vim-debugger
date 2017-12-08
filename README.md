@@ -1,3 +1,30 @@
+# !Please Read!
+In node 7.7 release the api for the debugger changed and we did not yet mangage to update the plugin accordingly
+In order for this plugin to work use 7.6 version of node get it [here](https://nodejs.org/dist/v7.6.0/)
+If you don't want to configure nvm to work with the debugger or your affraid you could break your current setup,
+just download the binary to your desktop.
+```bash
+~/Desktop/node-v7.6.0-darwin-x64/bin/node --debug-brk examples/qqq.js
+```
+If this does not work for you please consider to open an issue , join our [gitter][gitter] chatroom or talk to us on twitter and ask your question there.
+We are always happy to help.
+
+
+# Test Coverage
+
+|Integration Test| Platform | User |
+|---|---|---|
+|Description of the Test would add a link to our wiki here | Mac OS X 10.12.6 | Anzumana |
+
+# Contributors
+
+|	User	|	Code	|	Docs	|	Continuous Integration | Testing | Test Coverage | 
+|	---	|	---	|	---	|
+|Sidorales| ||
+|Joshua Appelman||
+|The Gitter Badger ?||
+|Josh Coffey||
+
 [![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=sidorares&url=https://github.com/sidorares/node-vim-debugger&title=node-vim-debugger&language=&tags=github&category=software)
 
 node-vim-debugger
@@ -160,3 +187,5 @@ Move up one stack frame.
   - [ndb](https://github.com/smtlaissezfaire/ndb)
   - [node-profiler](https://github.com/bnoordhuis/node-profiler)
   - [v8.log processor](https://github.com/sidorares/node-tick)
+
+[gitter]: https://badges.gitter.im/Join Chat.svg)](https://gitter.im/sidorares/node-vim-debugger?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
