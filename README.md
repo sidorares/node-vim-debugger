@@ -14,16 +14,20 @@ We are always happy to help.
 
 |Integration Test| Platform | User |
 |---|---|---|
-|Description of the Test would add a link to our wiki here | Mac OS X 10.12.6 | Anzumana |
+|Description of the Test would add a link to our wiki here | Mac OS X 10.12.6 | [Anzumana](https://github.com/anzumana) |
 
 # Contributors
 
 |	User	|	Code	|	Docs	|	Continuous Integration | Testing | Test Coverage | 
 |	---	|	---	|	---	|
-|Sidorales| ||
-|Joshua Appelman||
-|The Gitter Badger ?||
-|Josh Coffey||
+|[sidorales](https://github.com/sidorares)| ʘ‿ʘ |ʘ‿ʘ|
+|[anzumana](https://github.com/anzumana)||ʘ‿ʘ|
+|[baopham](https://github.com/baopham)||ʘ‿ʘ|
+|[coderofsalvation](https://github.com/coderofsalvation)||ʘ‿ʘ|
+|[gitter-badger](https://github.com/gitter-badger)||ʘ‿ʘ|
+|[mynameiscoffey](https://github.com/mynameiscoffey)||ʘ‿ʘ|
+|[adambiggs](https://github.com/adambiggs)||ʘ‿ʘ|
+|[bitdeli-chef](https://github.com/bitdeli-chef)||ʘ‿ʘ|
 
 [![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=sidorares&url=https://github.com/sidorares/node-vim-debugger&title=node-vim-debugger&language=&tags=github&category=software)
 
