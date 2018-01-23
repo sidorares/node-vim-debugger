@@ -4,7 +4,7 @@
   "description": "vim-netbeans based debugger",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "bin": {
     "node-vim-inspector": "./bin/vim-inspector.js"
@@ -26,6 +26,7 @@
     "cardinal": "^0.4.4",
     "coffee-script": "~1.6.3",
     "convert-source-map": "^0.4.1",
+    "jest-cli": "^21.2.1",
     "optimist": "^0.6.1",
     "portfinder": "^0.2.1",
     "rc": "^0.5.1",
@@ -33,5 +34,8 @@
     "tmp": "0.0.20",
     "v8-debugger": "1.0.0",
     "vim-netbeans": "~2.0.0"
+  },
+  "devDependencies": {
+    "jest": "^21.2.1"
   }
 }

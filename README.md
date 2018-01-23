@@ -1,3 +1,42 @@
+# !Please Read!
+
+In node 7.7 release the api for the debugger changed and we did not yet mangage to update the plugin accordingly
+In order for this plugin to work use 7.6 version of node get it from [npm][npm]
+If you don't want to configure nvm to work with the debugger or your affraid you could break your current setup,
+just download the binary to your desktop.
+```bash
+~/Desktop/node-v7.6.0-darwin-x64/bin/node --debug-brk examples/qqq.js
+```
+You could put an alias into your zshrc/bashrc/fishrc
+This alias works assuming you put the node file you downloaded from [npm][npm] onto your desktop
+If you want to place it somewhere else update the path accordingly
+```bash
+alias node7.6="~/Desktopnode-v7.6.0-darwin-x64/bin/node --debug-brk"
+```
+If this does not work for you please consider to open an issue , join our [slack][slack] chatroom or talk to us on twitter and ask your question there.
+We are always happy to help.
+
+# Test Coverage
+
+| User | Platform | Status |
+|---|---|---|
+| Mac OS X 10.12.6  Node 7.6 Vim 8.0| [Anzumana](https://github.com/anzumana) | +
+| Linux Node Node 6.2 Vim 8.0 |User | + |
+| Linux Node Node 6.2 Neovim 0.2.2 |User | - |
+
+# Contributors
+
+|	User	|	Code	|	Docs	|	Continuous Integration | Testing | Test Coverage | 
+|	---	|	---	|	---	|
+|[sidorales](https://github.com/sidorares)| ʘ‿ʘ |ʘ‿ʘ|
+|[anzumana](https://github.com/anzumana)||ʘ‿ʘ|
+|[baopham](https://github.com/baopham)||ʘ‿ʘ|
+|[coderofsalvation](https://github.com/coderofsalvation)||ʘ‿ʘ|
+|[gitter-badger](https://github.com/gitter-badger)||ʘ‿ʘ|
+|[mynameiscoffey](https://github.com/mynameiscoffey)||ʘ‿ʘ|
+|[adambiggs](https://github.com/adambiggs)||ʘ‿ʘ|
+|[bitdeli-chef](https://github.com/bitdeli-chef)||ʘ‿ʘ|
+
 [![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=sidorares&url=https://github.com/sidorares/node-vim-debugger&title=node-vim-debugger&language=&tags=github&category=software)
 
 node-vim-debugger
@@ -160,3 +199,8 @@ Move up one stack frame.
   - [ndb](https://github.com/smtlaissezfaire/ndb)
   - [node-profiler](https://github.com/bnoordhuis/node-profiler)
   - [v8.log processor](https://github.com/sidorares/node-tick)
+
+[gitter]: https://badges.gitter.im/Join
+[slack]: https://javascriptvimdebugger.slack.com/
+[npm]: https://nodejs.org/dist/v7.6.0/
+[testing_breakpoints]: docs/testing.md#SetBreakpoint

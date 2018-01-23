@@ -4,3 +4,10 @@
 
 - repl DSL https://github.com/sidorares/node-vim-debugger/issues/11
 - user configured actions on startup/step/break
+
+- when you are in -nb mode with vim and open another file and you press the keyboard combination for stack frame up 
+TypeError: Cannot read propert 'dc'of undefined
+
+include 
+https://github.com/kentcdodds/all-contributors/blob/master/README.md
+into the repo
